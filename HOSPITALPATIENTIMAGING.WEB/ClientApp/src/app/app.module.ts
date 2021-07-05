@@ -9,8 +9,6 @@ import { PatientsModule } from './patients/patients.module';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ListComponent } from "./patients/list/list.component";
 
 @NgModule({
@@ -18,8 +16,6 @@ import { ListComponent } from "./patients/list/list.component";
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -28,8 +24,6 @@ import { ListComponent } from "./patients/list/list.component";
     PatientsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
       { path: 'patients', component: ListComponent }
     ])
   ],
