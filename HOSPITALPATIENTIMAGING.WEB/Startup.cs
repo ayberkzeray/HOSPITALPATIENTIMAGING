@@ -1,3 +1,5 @@
+using HOSPITALPATIENTIMAGING.APPLICATION.Interfaces;
+using HOSPITALPATIENTIMAGING.APPLICATION.Services;
 using HOSPITALPATIENTIMAGING.DATA.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -24,7 +26,7 @@ namespace HOSPITALPATIENTIMAGING.WEB
         {
             services.AddDbContext<HospitalPatientImagingContext>(options =>
              options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+            services.AddScoped<IPatientService, PatientService>();
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory

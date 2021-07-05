@@ -4,6 +4,10 @@ namespace HOSPITALPATIENTIMAGING.DATA.Models
 {
     public class HospitalPatientImagingContext : DbContext
     {
+        public HospitalPatientImagingContext()
+        {
+
+        }
         public HospitalPatientImagingContext(DbContextOptions<HospitalPatientImagingContext> options) : base(options)
         {
 

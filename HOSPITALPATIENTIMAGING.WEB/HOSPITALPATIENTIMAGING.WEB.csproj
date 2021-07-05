@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HOSPITALPATIENTIMAGING.APPLICATION\HOSPITALPATIENTIMAGING.APPLICATION.csproj" />
     <ProjectReference Include="..\HOSPITALPATIENTIMAGING.DATA\HOSPITALPATIENTIMAGING.DATA.csproj" />
   </ItemGroup>
 
